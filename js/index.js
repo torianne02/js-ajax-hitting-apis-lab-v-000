@@ -1,6 +1,5 @@
 const rootURL = 'https://api.github.com';
 
-// repositories
 function getRepositories() {
   const username = document.getElementById('username').value;
   const uri = rootURL + '/users/' + username + '/repos';
@@ -32,7 +31,6 @@ function displayRepositories() {
   document.getElementById('repositories').innerHTML = repoList;
 }
 
-// commits
 function getCommits(el) {
   const repoName = el.dataset.repository;
   const uri = rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/commits';
@@ -61,7 +59,6 @@ function displayCommits() {
   document.getElementById('details').innerHTML = commitList;
 }
 
-// branches
 function getBranches(el) {
   const repoName = el.dataset.repository;
   const uri = rootURL + '/repos/' + el.dataset.username + '/' + repoName + '/branches';
